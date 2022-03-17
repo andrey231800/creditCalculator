@@ -1,0 +1,16 @@
+.results {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 25px;
+    &__div{
+        label {
+            color: #8a8a8a;
+            font-size: 13px;
+        }
+        div {
+            padding-top: 15px;
+            font-weight: 900;
+            font-size: 26px;
+        }
+    }
+}

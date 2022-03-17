@@ -1,0 +1,41 @@
+.details_list {
+    padding-bottom: 30px;
+    padding-top: 25px;
+    &-btn {
+        display: flex;
+        justify-content: center;
+        button {
+            background-color: #fac91b;
+            border-radius: 25px;
+            border: none;
+            padding: 10px 40px;
+            cursor: pointer;
+            &:hover {
+                background-color: #a56032;
+                transition: 0.5s ease-in-out;
+            }
+            span {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+.results_wrapper {
+    // display: block;
+    width: 80%;
+    
+    margin: 0 auto;
+    
+    // padding: 25px 155px 0 155px;
+    h2 {
+        font-size: 35px;
+        margin: 0;
+        padding-top: 35px;
+    }
+    .results {
+        justify-content: space-between;
+    }
+}

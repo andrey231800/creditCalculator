@@ -1,0 +1,48 @@
+.select {
+    position: relative;
+    // z-index: 1;
+    &__header {
+        display: flex;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        &-icon {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-shrink: 0;
+            margin-left: auto;
+        }
+        &-current {
+            font-size: 18px;
+            line-height: 24px;
+            padding: 8px;
+        }
+    }
+    &__body {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        border: 1px solid #ccc;
+        background-color: #FFF;
+        
+        &-item {
+            line-height: 24px;
+            padding: 8px;
+            font-size: 16px;
+            &:hover {
+                background-color: #f2f2f2;
+            }
+        }
+    }
+    
+}
+
+.is-active {
+    .select__body {
+        display: block;
+    }
+}

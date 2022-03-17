@@ -1,0 +1,29 @@
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__contents {
+   
+    margin-top: 25px;
+    &-ul {
+        @include flex();
+        background-color: #fac91b;
+        padding: 15px 45px 15px 45px;
+        margin: 0 auto;
+        border-radius: 15px;
+        li {
+            font-size: 20px;
+            font-weight: 900;
+            list-style-type: none;
+        }
+    }
+    &-calc {
+            @include flex();
+            border-bottom: 1px rgb(206, 202, 202) solid;
+            padding: 5px 0 5px 0;
+            li {
+                list-style-type: none;
+            }
+    }
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Merienda:wght@400;700&family=Poppins&family=Roboto:ital,wght@0,500;0,900;1,400;1,900&display=swap');
+
+* {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+body {
+  background-color: rgba(23, 83, 15, 0.8);
+}
+
+
+.wrapper {
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 29px;
+  width: 60%;
+}
+
+.resdet_block {
+  box-shadow: 0px 3px 15px rgba(34, 60, 80, 0.2);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+
