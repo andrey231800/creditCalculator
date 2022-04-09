@@ -22,4 +22,6 @@ export interface IContent {
     input: NumStr
     payPerMonth: NumStr;
     inputProcents: NumStr;
+    totalPaying: NumStr
+    totalOverpayment: NumStr
 }

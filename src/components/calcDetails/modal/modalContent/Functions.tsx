@@ -12,8 +12,8 @@ let yy
 export const forFunc = (arg: NumStr, inputProcents: NumStr, payPerMonth: NumStr, input: NumStr) => {
 
     let totalProcents = ((+input * +inputProcents/100 * 30)/365).toFixed(2);
-    const creditBody = (+payPerMonth - +totalProcents).toFixed(2);
-    const remaindSum = (+input - +creditBody).toFixed(2);
+    const creditBody = +(+payPerMonth - +totalProcents).toFixed(2);
+    let remaindSum = +(+input - +creditBody).toFixed(2);
 
     
     
@@ -26,6 +26,8 @@ export const forFunc = (arg: NumStr, inputProcents: NumStr, payPerMonth: NumStr,
 
         if(dd < 10) dd = '0' + dd;
         if(mm < 10) mm = '0' + mm;
+
+        remaindSum = +(remaindSum - creditBody).toFixed(2)
 
         if(mm > 12){
             yy += 1;

@@ -6,9 +6,15 @@ import './modalContent.scss'
 
 
 
-const ModalContent: FC<IContent> = ({select, input, payPerMonth, inputProcents}) => {
+const ModalContent: FC<IContent> = ({
+        select, 
+        input, 
+        payPerMonth, 
+        inputProcents, 
+        totalPaying, 
+        totalOverpayment
+    }) => {
     
-
     return (
         <div className="modal__contents">
            <ul className='modal__contents-ul'>
@@ -26,6 +32,11 @@ const ModalContent: FC<IContent> = ({select, input, payPerMonth, inputProcents})
                 <li>{input}</li>
            </ul>
            {forFunc(select, inputProcents, payPerMonth, input)}
+            <ul className='modal__contents-total'>
+                <li>{totalPaying}</li>
+                <li>{totalOverpayment}</li>
+                <li>{input}</li>
+            </ul>
         </div>
     );
 };

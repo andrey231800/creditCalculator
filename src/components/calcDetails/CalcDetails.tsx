@@ -40,6 +40,8 @@ const CalcDetails: FC<IDetails> = ({input, select, secondSelect,payPerMonth, tot
                                    input={input} 
                                    payPerMonth={payPerMonth}
                                    inputProcents={inputProcents}
+                                   totalPaying={totalPaying}
+                                    totalOverpayment={totalOverpayment}
                                 />
                             </div>
                     </Modal>
