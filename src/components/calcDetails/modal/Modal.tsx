@@ -1,26 +1,20 @@
 import React, { FC } from 'react';
+import { IActive } from '../../../types/modal';
 import './modal.scss'
-
-export interface IActive {
-    active: boolean;
-    setActive: (arg: boolean) => void;
-}
-
-
 
 const Modal: FC<IActive> = ({active, setActive, children}) => {
     return (
             <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)} >
                 <div 
                     className={active ? "modal__content active" : "modal__content"}
-                    onClick={(e: React.MouseEvent<HTMLDivElement>) => {
+                    onClick={e => {
                         e.stopPropagation()
                     }}
                 >
                     <button 
                         className='modal__content-btn' 
                         style={{height: '20px'}}
-                        onClick={(e: React.MouseEvent<HTMLButtonElement>) =>{
+                        onClick={e =>{
                             e.preventDefault();
                             setActive(false);
                         } }

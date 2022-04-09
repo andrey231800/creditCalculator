@@ -1,11 +1,6 @@
 import React, { FC } from 'react';
-import { useState, useEffect } from 'react';
-import './inputProcents.scss'
+import { IFetch } from '../../../types/form';
 
-interface IFetch {
-    fetchingData:  number | string;
-    handleFetchChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
 
 const InputProcents: FC<IFetch> = ({fetchingData, handleFetchChange}) => {
 

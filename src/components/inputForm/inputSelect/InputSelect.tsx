@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
-import './inputSelec.scss'
+import { ISelect } from '../../../types/form';
 
-interface ISelect {
-    selectState: string;
-    handleChangeSelect: (e:React.ChangeEvent<HTMLSelectElement>) => void
-}
 
-const InputSelect: FC<ISelect> = ({selectState, handleChangeSelect, children}) => {
+
+const InputSelect: FC<ISelect> = ({
+        selectState, 
+        handleChangeSelect, 
+        children
+    }) => {
     return (
         <div className='input__calc'>
                 <span>Срок кредита:</span>

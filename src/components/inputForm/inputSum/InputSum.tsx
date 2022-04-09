@@ -1,10 +1,6 @@
 import React, { FC} from 'react';
-import './inputSum.scss'
+import { Input } from '../../../types/form';
 
-interface Input {
-    input: string | number;
-    handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
 
 const InputSum: FC<Input> = ({input, handleChange}) => {
 

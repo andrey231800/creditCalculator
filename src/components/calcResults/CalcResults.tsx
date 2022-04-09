@@ -1,13 +1,8 @@
 import React, { FC } from 'react';
+import { IInput } from '../../types/results';
 import './calcResults.scss'
 
-export interface IInput {
-    secondSelect: string;
-    payPerMonth: number | string
-    totalPaying: number | string
-    totalOverpayment: number | string
-    difTotalPaying: number | string
-}
+
 
 const CalcResults: FC<IInput> = ({ secondSelect ,payPerMonth, difTotalPaying, totalOverpayment, totalPaying}) => {
     // Number(input)

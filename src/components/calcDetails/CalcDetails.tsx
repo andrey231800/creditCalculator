@@ -1,20 +1,10 @@
 import React, { FC, useState } from 'react';
-import CalcResults, { IInput } from '../calcResults/CalcResults';
+import { IDetails } from '../../types/modal';
+import CalcResults from '../calcResults/CalcResults';
 import './calcDetails.scss'
 import Modal from './modal/Modal';
 import ModalContent from './modal/modalContent/ModalContent';
 
-
-interface IDetails {
-    input: string | number;
-    select: string | number;
-    secondSelect: string;
-    payPerMonth:string | number;
-    totalPaying:string | number;
-    totalOverpayment:string | number;
-    difTotalPaying:string | number;
-    inputProcents: string | number;
-}
 
 const CalcDetails: FC<IDetails> = ({input, select, secondSelect,payPerMonth, totalPaying ,totalOverpayment, difTotalPaying, inputProcents}) => {
     const [modalActive, setModalActive] = useState<boolean>(false);

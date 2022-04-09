@@ -9,6 +9,7 @@ import CalcDetails from './components/calcDetails/CalcDetails';
 import CalcResults from './components/calcResults/CalcResults';
 import InputForm from './components/inputForm/InputForm';
 import Descr from './components/description/Descr';
+import { InputEvent, NumStr, SelectEvent } from './types/customTypes';
 
 export interface FetchArray{
   Data: string ;
@@ -39,31 +40,31 @@ const App:FC = () => {
 
 
   const rate: number = (fetchState && fetchState[0]?.Value) + 5;
-  console.log(rate)
+  console.log("rate:", rate)
 
-  const [inputText, setInputText] = useState<number | string>('1000');
+  const [inputText, setInputText] = useState<NumStr>('1000');
 
-  const [fetchData, setFetchData] = useState<number | string>('14.5');
+  const [fetchData, setFetchData] = useState<NumStr>('14.5');
 
   const [selectState, setSelectState] = useState<string>('12');
 
   const [selectSecondState, setSelectSecondState] = useState<string>('1');
 
-  const selectHandler = (e: React.ChangeEvent<HTMLSelectElement>): void => {
+  const selectHandler = (e: SelectEvent) => {
     setSelectSecondState(e.target.value)
   }
 
-  const handleChangeSelect = (e: React.ChangeEvent<HTMLSelectElement>): void => {
+  const handleChangeSelect = (e: SelectEvent) => {
     setSelectState(e.target.value)
   }
 
-  const regEx: RegExp = /[A-Z, a-z, !, `,?, §, +, -, А-Я, а-я, ±, #,@, ", ',  \/, \\, :, ;, ~, >, <]/g;
+  const regEx: RegExp = /[№, \^, A-Z, a-z, !, `,?, §, +, -, А-Я, а-я, ±, #,@, ", ',  \/, \\, :, ;, ~, >, <, \[, \]]/g;
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleChange = (e: InputEvent) => {
     setInputText(e.target.value.replace(regEx, ''))
   }
 
-  const handleFetchChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleFetchChange = (e: InputEvent) => {
     setFetchData(e.target.value.replace(regEx, ''));
   }
 
