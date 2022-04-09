@@ -18,9 +18,6 @@ export interface FetchArray{
 
 const App:FC = () => { 
 
-  const [fetchState, setFetchState] = useState<FetchArray[]>([])
-
-
   const date = new Date()
   const day = date.getDate();
   const month = date.getMonth() + 1;
@@ -33,18 +30,15 @@ const App:FC = () => {
     fetch(URL)
         .then(res => res.json())
         .then(data => {
-            setFetchState(data)
+            setFetchData(data[0].Value + 5)
         })
         .catch(err => console.log(err.message))
   }, [])
 
 
-  const rate: number = (fetchState && fetchState[0]?.Value) + 5;
-  console.log("rate:", rate)
-
   const [inputText, setInputText] = useState<NumStr>('1000');
 
-  const [fetchData, setFetchData] = useState<NumStr>('14.5');
+  const [fetchData, setFetchData] = useState<NumStr>(14);
 
   const [selectState, setSelectState] = useState<string>('12');
 
